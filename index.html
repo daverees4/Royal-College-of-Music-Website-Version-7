@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="no-js" lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>RCM Global Style Definition</title>
+      <!-- Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,500,600|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+      <!--CSS-->
+      <link rel="stylesheet" href="css/foundation.css" />
+      <link rel="stylesheet" href="css/app.css" />
+   </head>
+   <body>
+      <div class="row">
+         <div class="large-12 columns">
+            <h1>Royal College of Music Website Version 7 Design Specification</h1>
+         </div>
+      </div>
+      <hr>
+      <div class="row">
+         <div class="large-12 columns">
+            <div class="callout large">
+               <h3>Introduction</h3>
+               <p>This document will serve as a specification for the RCM/COG Design rebuild of the RCM Website undertaken in 2016.</p>
+               <p>The aim of this document will be to set out what needs to be defined as a part of the design process, and eventually serve as a record of that specification when the design is complete.</p>
+               <p>Starting from the smallest elements of the design upwards, we will decide on CSS styling and functionality for each element and note these decisions here.</p>
+            </div>
+         </div>
+      </div>
+      <hr>
+      <div class="row">
+         <div class="large-12 columns">
+            <h3>Part 1 - Framework & Technical Specification</h3>
+            <h4>Framework</h4>
+            <p>The new website will use the <a href="http://foundation.zurb.com/" target="_blank">Foundation CSS framework</a> (version 6.2).  In our research, this was the framework that provided the most assistance with providing responsive website features, with the most flexibility of design.</p>
+            <h4>Browser Compatibility</h4>
+            <p>Foundation (and therefore this website) is compatible with the following browsers:</p>
+            <table>
+               <tr>
+                  <td>Browser</td>
+                  <td>Compatible Versions</td>
+               </tr>
+               <tr>
+                  <td>Chrome, Firefox, Safari, Opera, Mobile Safari, IE Mobile</td>
+                  <td>Last two versions</td>
+               </tr>
+               <tr>
+                  <td>Internet Explorer</td>
+                  <td>Version 9+</td>
+               </tr>
+               <tr>
+                  <td>Android Browser</td>
+                  <td>Version 2.3+</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+         <hr>
+
+
+               <div class="row">
+	         <div class="large-12 columns">
+     <h3>Part 2 - Global Styles</h3>
+     <h4>Font Sizing</h4>
+     <p>In Foundation, the default font size is set to 100% of the browser style sheet, usually 16 pixels. This ensures compatibility with browser-based text zoom or user-set defaults.</p>
+     <p>All other measurements are based on this default font-size.  This allows the site to be effectively scaled by users on screenreaders.</p>
+            <p>For this reason all measurements in this specification should use <strong>rem</strong> as the unit of measurement.  A rem is equivalent to the standard text size, i.e. 1rem = 16px 0.5rem = 8px.</p>
+         <h4>Primary Palette</h4>
+         <p>Foundation's basic palette uses 5 colours: primary, secondary, success, alert and warning.  There are also greyscale classes running from white to black. We will be using a primary and secondary colour drawn from the RCM's branding guidlines:</p>
+         
+         <p><a href="#" class="expanded button">$primary - RCM Red - #C50038</a>
+            <a href="#" class="expanded secondary button">$secondary - RCM Grey - #c6c6c6</a>
+            <a href="#" class="expanded success button">$success - Foundation Default </a>
+            <a href="#" class="expanded alert button">$alert - Foundation Default</a>
+            <a href="#" class="expanded warning button">$warning - Foundation Default</a>      
+         </p>
+         
+         <h4>Other Colours</h4>
+         <p>Foundation sets some default colours, which can be applied anywhere (to page backgrounds, font colours, buttons etc.:</p>
+                  <table>
+               <tr>
+                  <td>Variable</td>
+                  <td>Hex Value</td>
+               </tr>
+               <tr>
+                  <td>$white (used for default page background)</td>
+                  <td>#fefefef</td>
+               </tr>
+               <tr>
+                  <td>$black (used for default font colour)</td>
+                  <td>#0a0a0a</td>
+               </tr>
+                     <tr>
+                  <td>$light-gray</td>
+                  <td>#e6e6e6</td>
+               </tr>
+                     <tr>
+                  <td>$medium-gray</td>
+                  <td>#cacaca</td>
+               </tr>
+                     <tr>
+                  <td>$dark-gray</td>
+                  <td>#8a8a8a</td>
+               </tr>
+            </table>
+                     <h4>Breakpoints</h4>
+            <p>Foundation is designed to serve all screens.  It does this by allowing us to modify the elements when the screen is of a certain width.  This is a 'mobile first' framework and this affect how designs should be created.  We are encouraged to design for mobile first, and then add more features as we have more screen to use.  Foundation sets 'breakpoints' to accommodate each type of screen, as screen width increases, passing these points allows for alternative layouts to be used. 
+            <p>
+            <p>Foundation's default breakpoints are as follows:</p>
+            <ul>
+               <li><strong>Small (mobile):</strong> any screen.</li>
+               <li><strong>Medium (tablet):</strong> any screen 640 pixels or wider.</li>
+               <li><strong>Large (desktop):</strong> any screen 1024 pixels or wider.</li>
+            </ul>
+
+		              <h4>Grid</h4>
+		              
+		              <p>Full information about all the possibilities available with Foundation grids (nesting, offsetting etc.)  Can be found here: <a href="http://foundation.zurb.com/sites/docs/grid.html" target="_blank">http://foundation.zurb.com/sites/docs/grid.html</a> 
+            <p>Foundation by default has a grid of 12 columns.  Each column has a default gutter (padding) of 1.875rem. The default maximum width of the grid is 1200px, after this width an empty margin is added. A fully fluid layout can be created by setting this maximum width to 100% of the screen width.</p>
+           
+	            
+         <!-- Grid Example -->
+         <div class="row">
+            <div class="large-6 medium-6 columns">
+               <div class="callout">
+                  <p>Six columns</p>
+               </div>
+            </div>
+            <div class="large-6 medium-6 columns">
+               <div class="callout">
+                  <p>Six columns</p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="large-4 medium-4 small-4 columns">
+               <div class="callout">
+                  <p>Four columns</p>
+               </div>
+            </div>
+            <div class="large-4 medium-4 small-4 columns">
+               <div class="callout">
+                  <p>Four columns</p>
+               </div>
+            </div>
+            <div class="large-4 medium-4 small-4 columns">
+               <div class="callout">
+                  <p>Four columns</p>
+               </div>
+            </div>
+         </div>
+<hr>
+   <div class="row">
+         <div class="large-12 columns">
+            <h3>Part 3 - Typography</h3>
+            <h4>Headings</h4>
+            <hr>
+
+            <h1>This is heading 1 - font-size: 3rem</h1>
+            <h2>This is heading 2 - font-size: 2.5rem</h2>
+            <h3>This is heading 3 - font-size: 1.9375rem</h3>
+            <h4>This is heading 4 - font-size: 1.5625rem</h4>
+            <h5>This is heading 5 - font-size: 1.25rem</h5>
+            <h6>This is heading 6 - font-size: 1rem</h6>
+         <hr>
+            <h4>Heading Font Family</h4>
+            <p>The heading font family will be: <code> font-family: "Montserrat", Arial, Helvetica, Garuda, sans-serif;</code></p>
+            <p>Other settings are:</p>
+            <ul>
+	            <li>font-weight: normal</li>
+	            <li>font-style: normal</li>
+	            <li>font-style: normal</li>
+	            <li>color: $primary - #c50038 (see colors above)</li>
+	            <li>line-height: 1.4</li>
+				<li>margin-bottom: 0.5rem;</li>
+				<li>text-rendering: optimizeLegibility;</li>
+            </ul>
+            <hr>
+            <h4>Paragraph Text</h4>
+         <hr>
+         <p>This is some paragraph text</p>
+         <hr>
+	            
+            <h4>Default Font Family</h4>
+            <p>The font family for default site text will be: <code>font-family: 'Raleway', Arial, sans-serif;</code></p>
+            <p>Other settings are:</p>
+            <ul>
+	            <li>font-weight: normal</li>
+	            <li>font-style: normal</li>
+	            <li>font-style: normal</li>
+	            <li>color: $black - #0a0a0a (see colors above)</li>
+	            <li>line-height: 1.6</li>
+				<li>margin-bottom: 1rem;</li>
+				<li>text-rendering: optimizeLegibility;</li>
+            </ul>
+                   </div>	
+      </div>
+
+    
+     
+
+      </div>
+      </div>
+      <!-- JS -->
+      <script src="js/vendor/jquery.min.js"></script>
+      <script src="js/vendor/what-input.min.js"></script>
+      <script src="js/foundation.min.js"></script>
+      <script src="js/app.js"></script>
+   </body>
+</html>
+
